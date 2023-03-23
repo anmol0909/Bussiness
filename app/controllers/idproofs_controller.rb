@@ -8,7 +8,7 @@ class IdproofsController < ApplicationController
     @idproof = Idproof.new
   end
 
-  def show
+  def show  
     @idproof = Idproof.find(params[:id])
 end
 
@@ -18,6 +18,8 @@ end
 
 def create
   @idproof = Idproof.new(idproof_params)
+  @idproof.merchant_id = current_merchant.id
+
 
   if @idproof.save
     redirect_to @idproof, notice: 'Idproof was successfully created.'

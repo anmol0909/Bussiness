@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   resources :idproofs
-  resources :productimages
+  # resources :productimages
+
+  resources :products do
+    resources :productimages
+  end
+  
   
 end

@@ -16,8 +16,16 @@
   <% end %>
   <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
+    <% end%>
+  
+  <h1 align = "center"> MERCHANT SYSTEM </h1> 
+
+  <% if merchant_signed_in? %>
+  <%= link_to "Logout", destroy_merchant_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Login", new_merchant_session_path %>
   <% end %>
-  <h1 align = "center"> MERCHANT SYSTEM </h1>
+  
   <strong><%= link_to "HOME PAGE" , root_path %></strong>
     <%= yield %>
   </body>

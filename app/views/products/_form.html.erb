@@ -31,10 +31,10 @@
     <%= form.collection_select :category_id, Category.all, :id, :name %>
   </div>
 
- <div>
-    <%= form.label :merchant_id, style: "display: block" %>
-    <%= form.collection_select :merchant_id, Merchant.all, :id, :email %>
-  </div>
+ <%# <div> %>
+    <%#= form.label :merchant_id, style: "display: block" %>
+    <%#= form.collection_select :merchant_id, Merchant.all, :id, :email %>
+  <%# </div> %>
 
   <div>
     <%= form.label :status, style: "display: block" %>
