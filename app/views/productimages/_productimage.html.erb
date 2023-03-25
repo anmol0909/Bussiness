@@ -5,12 +5,9 @@
     <%= image_tag productimage.image.url, size:20*20 %>
   </p>
 
-<%#= link_to "Edit this productimage", edit_product_productimage_path(@product, @productimage)%>
-<%#= button_to "Destroy this productimage", @productimage, method: :delete %>
-
-  <%# <p> %>
-    <%# <strong>Product:</strong> %>
-    <%#= productimage.product_id %>
-  <%# </p> %>
-
+  <p>
+    <strong>Product:</strong>
+    <%= Product.find(productimage.product_id).name  %>
+  </p>
+  
 </div>

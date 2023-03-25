@@ -19,7 +19,7 @@
             </a>
             <ul class="social">
               <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-              <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+              <li><a href="/products/<%=pro.id%>/wishlist" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
               <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
             <span class="product-new-label">Sale</span>
@@ -37,7 +37,7 @@
             <div class="price">₹<%= pro.price %>
               <p>Status:<%= pro.status %></p>
             </div>
-            <a class="add-to-cart" href="">+ Add To Cart</a>
+            <a class="add-to-cart" href="products/<%=pro.id%>/cart">+ Add To Cart</a>
             <p><%#= link_to "Show this Product", product_path %></p>
           </div>
         </div>

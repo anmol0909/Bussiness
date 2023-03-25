@@ -1,0 +1,18 @@
+<div id="<%= dom_id cart %>">
+  <p>
+    <strong>Count:</strong>
+    <%= cart.count %>
+  </p>
+
+  <p>
+    <strong>Merchant:</strong>
+    <%= cart.merchant_id %>
+  </p>
+
+  <p>
+    <strong>Product:</strong>
+    <%= Product.find(cart.product_id).name %>
+  </p>
+
+</div>
+   

@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many :productimages
+  has_many :carts
   belongs_to :category
   validates :name, :description, :category_id, :price, presence: true
   validates :status, presence: true, inclusion: { in: %w(active inactive draft) }

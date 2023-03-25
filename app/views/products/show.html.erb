@@ -4,13 +4,12 @@
 
 <%#= render partial: "productimages/form" %>
 <%= render @product.productimages %>
-<%= render 'productimages/form' %>     
+<%#= render 'productimages/form' %>     
 
 
 <div>
   <%= link_to "Edit this product", edit_product_path(@product) %> |
   <%= link_to "Back to products", products_path %>
-
   <%= button_to "Destroy this product", @product, method: :delete %>
 </div>
 
