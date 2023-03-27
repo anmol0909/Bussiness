@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :wishlists
-  resources :orders
+  resources :wishlists do
+    member do
+      get :remove_from_wishlist, to: "wishlists#destroy"
+    end
+  end
   resources :carts do
     member do
       get :order ,to: 'orders#create'
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
   resources :idproofs
+  resources :orders
   resources :products do
   member do 
     get :cart , to: 'carts#cart'

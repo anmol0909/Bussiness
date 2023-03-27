@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
   # GET /carts
   def index
-    @carts = Cart.all
+    @carts = Cart.where(merchant_id: current_merchant.id)
   end
 
   # GET /carts/1

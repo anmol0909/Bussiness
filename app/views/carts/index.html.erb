@@ -26,7 +26,7 @@
               <div class="col-sm-3 col-xs-3">
                 <img
                   class="img-responsive"
-                  src="https://c1.staticflickr.com/1/466/19681864394_c332ae87df_t.jpg"
+                  src="<%=cart.product.productimages.first.image if cart.product.productimages.any? %>" 
                 />
               </div>
               <div class="col-sm-6 col-xs-6">
